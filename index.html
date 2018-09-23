@@ -17,6 +17,8 @@
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
   </head>
   <body>
+  <body bgcolor="#E6E6FA">
+
     <div class="wrapper">
       <header>
         <h1>Aton</h1>
@@ -26,7 +28,7 @@
 
 
         <ul>
-          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.2.2/Aton-v1.2.2.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.3.0/Aton-v1.3.0.zip">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton">View On <strong>GitHub</strong></a></li>
         </ul>
@@ -36,38 +38,68 @@
 		<div>
 			<h2>
 			<a id="like-it" class="anchor" aria-hidden="true" href="#like-it"></a>Like it?</h2>
-			<p style="margin: 0 0 20px;">You can buy me a beer and share it.</p>
+			<p style="margin: 0 0 20px;">You can buy me a pint of ale 🍺</p>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="text-align: center; margin: 0 0 20px;">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="QYLVSBLBUWPC2">
 			<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
 			<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			<div style="text-align: center; margin: 0 0 20px;">
-			<script type="text/javascript">var switchTo5x=true;</script>
-			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-			<script type="text/javascript">stLight.options({publisher: "1aef2c78-fd6d-4169-bf66-4f080f786cf4", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-			<span class='st_sharethis_large' displayText='ShareThis'></span>
-			<span class='st_facebook_large' displayText='Facebook'></span>
-			<span class='st_twitter_large' displayText='Tweet'></span>
-			<span class='st_linkedin_large' displayText='LinkedIn'></span>
-			<span class='st_pinterest_large' displayText='Pinterest'></span>
-			<span class='st_email_large' displayText='Email'></span>
-			</div>
 			<h1></h1>
 
 		</div>
       </header>
       <section>
         <h1>
-<!--<a id="aton" class="anchor" href="#aton" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aton</h1>-->
+<h2>
+    <a id="1.3.0-Release-notes" class="anchor" href="#1.3.0-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.0 Release notes
+</h2>
+
+<ul>
+<li><p><strong>Houdini support:</strong> Initial support for SideFX Houdini includes the following.</p></li>
+<li style="list-style: none">
+  <ul class="margined">
+    <li>MultiFrame IPR with ROPs as Render Layers</li>
+    <li>Camera, Resolution, Sampling and Bucket Scanning Overrides</li>
+    <li>Render Region with Overscan options</li>
+    <li>Ignore Features for Diagnostics</li>
+    <li>Live Camera</li>
+  </ul>
+<p>HtoA implementaion is based on the <a href="https://www.linkedin.com/pulse/patching-aton-htoa-ryan-heniser/">research article</a> from Ryan Heniser, but the workflow is similar to Maya and Cinema 4D. See how to install at the bottom of this page.</p>
+<img src="https://raw.githubusercontent.com/Sosoyan/Aton/gh-pages/gifs/aton-v1.3.0-houdini-ipr.gif" alt="" style="max-width:100%;">
+
+</li>
+<br>
+<li><p><strong>Added Nuke v11.2 and Arnold v5.2 Core support:</strong></p></li>
+<li><p><strong>Auto  Snapshots:</strong> Each IPR session is now automatically being kept in memory with options to take, rename, reorder and remove the snapshots. Use write to disk options  to permanently store the them, as it was done before with capturing.</p></li>
+<li><p><strong>Render Layers:</strong> Render Layer names will show up as a prefix for snapshot's name on the stack. There is an arbitrary entry in the Arnold driver which can be set by a script.</p></li>
+<img src="https://raw.githubusercontent.com/Sosoyan/Aton/gh-pages/gifs/aton-v1.3.0-snapshots.gif" alt="" style="max-width:100%;">
+<br><br>
+<li><p><strong>Render Region:</strong> Region handles have been added in the node, which accelerates the workflow. It's still possible to use a crop nodes too.</p></li>
+<img src="https://raw.githubusercontent.com/Sosoyan/Aton/gh-pages/gifs/aton-v1.3.0-houdini-region.gif" alt="" style="max-width:100%;">
+<br><br>
+<li><p><strong>Status Bar Improvments:</strong></p></li>
+  <ul class="margined">
+    <li>Added Render Layer Name and Sampling Settings.</li>
+    <li>Status bar is now active at render time and grey when it's idle.</li>
+  </ul>
+<li><p><strong>Stability improvements and bug fixes:</strong> </p></li>
+<li style="list-style: none">
+  <ul class="margined">
+    <li>Fixed an issue with color picker not always showing at render time.</li>
+    <li>Incoming Pixel Aspect Ratio is now respected by the Format.</li>
+    <li>Fixed the progress for Render Region not showing up correctly.</li>
+    <li>Fixed a various threading issues causing to random crashes.</li>
+    <li>Fixed a crash with driver when the specified port is being used.</li>
+  </ul>
+</li>
+</ul>
 
 <h2>
     <a id="1.2.2-Release-notes" class="anchor" href="#1.2.2-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2.2 Release notes
 </h2>
 
 <ul>
-    <li><p><strong>Added Nuke v11.1 and Maya 2018 support</strong></p></li>
+    <li><p><strong>Adden Nuke v11.1 and Maya 2018 support</strong></p></li>
     <li><p><strong>Maya UI improvments and bug fixes</strong></p></li>
 </ul>
 
@@ -91,8 +123,8 @@
 <li style="list-style: none">
   <ul class="margined">
     <li>Multi frame IPR with AOVs</li>
-    <li>Render region with overscan</li>
-    <li>Feature Overrides</li>
+    <li>Render Region with Overscan</li>
+    <li>Ignore Features for Diagnostics</li>
     <li>Live Camera</li>
     <li>Sequence Rendering</li>
   </ul>
@@ -205,16 +237,31 @@ m.addCommand("Aton", "nuke.createNode(\"Aton\")")
 <li><p><strong>Install for Arnold</strong></p>
 <ul>
 <li>Copy driver_aton.dll(.dylib, .so) to $ARNOLD_PLUGIN_PATH<br><em>For example C:\solidangle\mtoadeploy\2017\shaders</em></li></ul>
+
 <li><p><strong>Install for Maya</strong></p></li>
 <ul><li><p>Copy aton_maya.py to Maya's scripts folder. <br><em>For example C:\Users\YourName\Documents\maya\scripts</em></p></li></ul>
+
 <li><p><strong>Install for Cinema 4D</strong></p>
 <ul><li><p>Copy aton_c4d.pyp and aton_icon.png to C4D's plugins folder. <br><em>For example C:\Program Files\MAXON\CINEMA 4D R18\plugins</em></p></li></ul>
 </li>
-<ul>
-</ul>
-</li>
-<li><p>Binaries are compiled against Nuke 9.0v8/10.0v1 and Arnold 4.2.8.0 on Windows 7, OSX 10.11, CentOS 7 GCC 4.1.2</p></li>
 
+<li><p><strong>Install for Houdini</strong></p>
+<ul><li><p>Copy aton_houdini.py to HtoA's scripts folder. <br><em>$HTOA_PATH/scripts/python/htoa/aton_houdini.py</em></p></li></ul>
+<ul><li><p>It's necessary to inject an extra code into HtoA to be able to add a custom driver. Therefor insert the following python patch after the line 71 of the file <em>$HTOA_PATH/soho/arnold.py</em></p></ul>
+<pre><code>try:
+    from htoa.aton_houdini import atonPatch
+    atonPatch()
+except StandardError:
+    pass
+</code></pre></li>
+<img src="https://raw.githubusercontent.com/Sosoyan/Aton/gh-pages/png/htoa_aton_patch.png" alt="" style="max-width:100%;">
+<br><br>
+<ul><li><p>Open Aton UI by running the following python snippet in Houdini</em></p></li></ul>
+<pre><code>from htoa import aton_houdini
+aton_houdini.Aton().show()
+</code></pre>
+</li>
+<li><p>Binaries are compiled against Nuke 10.5 / 11.2 and Arnold 4.2 / 5.0 / 5.2</p></li>
 
 <h2>
 <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use</h2>
@@ -226,14 +273,13 @@ m.addCommand("Aton", "nuke.createNode(\"Aton\")")
 <li>
 <p>Run this Python code bellow in script editor to open Aton UI or put it on the shelf</p>
 
-<pre><code>from aton_maya import *
-aton = Aton()
-aton.show()
+<pre><code>import aton_maya
+aton_maya.Aton().show()
 </code></pre>
 </li>
 <ul>
 <li><p>To use Crop node for the Render Region, first copy it to clipboard, click Get.</p></li>
-<li><p>In order to change the default capture path, make an environment variable <strong>$ATON_CAPTURE_PATH</strong> and point it to your favorite directory.</p></li>
+<li><p>In order to change the default capture path, make an environment variable <strong>$ATON_CAPTURE_PATH</strong> and point it to your favourite directory.</p></li>
 <ul>
 </ol>
 
@@ -261,8 +307,8 @@ aton.show()
 <li>Brian Scherbinski</li>
 <li>Cameron Smither</li>
 <li>Dan Bradham</li>
-<li>John Draisey</li>
 <li>Peter Horvath</li>
+<li>Ryan Heniser</li>
 </ul>
 
 <p style="margin: 0;">It's based on: </p>
