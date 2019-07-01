@@ -28,7 +28,7 @@
 
 
         <ul>
-          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.3.1/Aton-v1.3.1.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.3.5/Aton-v1.3.5.zip">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton">View On <strong>GitHub</strong></a></li>
         </ul>
@@ -37,6 +37,26 @@
       </header>
       <section>
         <h1>
+      <h2>
+          <a id="1.3.5-Release-notes" class="anchor" href="#1.3.5-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.5 Release notes
+      </h2>
+      <ul>
+          <li><p><strong>Simultaneous render sessions:</strong> Multiple render sessions can now simultaneously be launched using the same port number.</p></li>
+          <li><p><strong>Distributive rendering on the farm:</strong> The frame can be split into smaller tiles and distributed on the local render farm via region arguments. It's fully farm manager agnostic, meaning you have to sub-class and implement supplied virtual methods in the python script in order to get it to work for the given farm requirements. At this moment this feature is only available for Houdini, but similar scripts should work fine for the other DCC apps too.</p></li>
+          <li><p><strong>Houdini specific Notes</strong></p></li>
+          <li style="list-style: none">
+              <ul class="margined">
+                  <li>General UI improvements.</li>
+                  <li>Added sequence rendering support.</li>
+                  <li>Stores override settings per selected output rop.</li>
+                  <li>Added filter box for output rops to use with wildcards.</li>
+              </ul>
+          <li><p><strong>Stability improvements and bug fixes:</strong> </p></li>
+          <li style="list-style: none">
+              <ul class="margined">
+                  <li>Sets correct frame range in Multiple Frame mode.</li>
+              </ul>
+      </ul>
     <h2>
         <a id="1.3.1-Release-notes" class="anchor" href="#1.3.1-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.1 Release notes
     </h2>
@@ -49,8 +69,8 @@
                 <li>Remove multiple selection of snapshots.</li>
             </ul>
         <li><p><strong>Houdini GUI improvements</strong></p></li>
-        <li><p><strong>Added Nuke v11.3 and Arnold v5.3 core support</strong></p></li>
-        <li><p><strong>Stability improvements and bug fixes</strong> </p></li>
+        <li><p><strong>Added Nuke v11.3 support</strong></p></li>
+        <li><p><strong>Stability improvements and bug fixes:</strong> </p></li>
   </ul>
     <h2>
     <a id="1.3.0-Release-notes" class="anchor" href="#1.3.0-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.0 Release notes
@@ -68,7 +88,7 @@
   </ul>
 <p>HtoA implementation is based on the <a href="https://www.linkedin.com/pulse/patching-aton-htoa-ryan-heniser/">research article</a> from Ryan Heniser, but the workflow is similar to Maya and Cinema 4D. See how to install at the bottom of this page.</p>
 </li>
-<li><p><strong>Added Nuke v11.2 and Arnold v5.2 Core support</strong></p></li>
+<li><p><strong>Added Nuke v11.2 and Arnold v5.2 Core support:</strong></p></li>
 <li><p><strong>Auto  Snapshots:</strong> Each IPR session is now automatically being kept in memory with options to take, rename, reorder and remove the snapshots. Use write to disk options to permanently store them, as it was done before with capturing.</p></li>
 <li><p><strong>Render Layers:</strong> Render Layer names will show up as a prefix for snapshot's name on the stack. There is an arbitrary output entry in the Arnold driver which can be set by a script.</p></li>
 <li><p><strong>Render Region:</strong> Region handles have been added in the node, which accelerates the workflow. It's still possible to use a crop nodes too.</p></li>
