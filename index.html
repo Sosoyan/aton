@@ -28,7 +28,7 @@
 
 
         <ul>
-          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.3.5/Aton-v1.3.5.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Sosoyan/Aton/releases/download/Aton-v1.3.6/Aton-v1.3.6.zip">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/Sosoyan/Aton">View On <strong>GitHub</strong></a></li>
         </ul>
@@ -38,11 +38,38 @@
       <section>
         <h1>
       <h2>
+          <a id="1.3.6-Release-notes" class="anchor" href="#1.3.6-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.6 Release notes
+      </h2>
+      <ul>
+          <li><p><strong>New Operator Aton:</strong> operator_aton is designed to replace all output drivers with aton driver at render time. In DCC apps like Houdini or Katana where the driver selection is not exposed in the UI, this can come handy to use Aton without extra scripts.</p></li>
+          <li><p><strong>Added metadata support:</strong>  All the information that Aton has on its framebuffers is now stored in the node as a metadata.</p></li>
+          <li><p><strong>Render region improvements.</strong></p></li>
+          <li style="list-style: none">
+              <ul class="margined">
+                  <li>Added Fit button in render region to fit the Nuke window.</li>
+                  <li>Clipboard data is now normalised to better work with multiple resolutions.</li>
+              </ul>
+          <li><p><strong>Added Nuke v12.0 support.</strong></p></li>
+          <li><p><strong>Houdini specific notes</strong></p></li>
+          <li style="list-style: none">
+              <ul class="margined">
+                  <li>Added Open and Select actions in the output context</li>
+                  <li>Added progressive toggle checkbox.</li>
+                  <li>Disables adaptive sampling if Camera AA is overridden</li>
+                  <li>Fixed pixel aspect ratio override.</li>
+              </ul>
+          <li><p><strong>Stability improvements and bug fixes:</strong> </p></li>
+          <li style="list-style: none">
+              <ul class="margined">
+                  <li>Fixes copy render region issue if Aton node existed in the Nuke script before.</li>
+              </ul>
+      </ul>
+      <h2>
           <a id="1.3.5-Release-notes" class="anchor" href="#1.3.5-Release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.5 Release notes
       </h2>
       <ul>
           <li><p><strong>Simultaneous render sessions:</strong> Multiple render sessions can now simultaneously be launched using the same port number.</p></li>
-          <li><p><strong>Distributive rendering on the farm:</strong> The frame can be split into smaller tiles and distributed on the local render farm via region arguments. It's fully farm manager agnostic, meaning you have to sub-class and implement empty virtual methods in the python script in order to get it to work for the given farm requirements. At this moment this feature is only available for Houdini, but similar scripts should work fine for the other DCC apps too.</p></li>
+          <li><p><strong>Distributive rendering on the farm:</strong> The frame can be split into smaller tiles and distributed on the local render farm via region arguments. It's fully farm manager agnostic, meaning you have to sub-class and implement supplied virtual methods in the python script in order to get it to work for the given farm requirements. At this moment this feature is only available for Houdini, but similar scripts should work fine for the other DCC apps too.</p></li>
           <li><p><strong>Houdini specific notes</strong></p></li>
           <li style="list-style: none">
               <ul class="margined">
@@ -54,7 +81,7 @@
           <li><p><strong>Stability improvements and bug fixes:</strong> </p></li>
           <li style="list-style: none">
               <ul class="margined">
-                  <li>Sets correct frame range in Multiple Frames mode.</li>
+                  <li>Sets correct frame range in Multiple Frame mode.</li>
               </ul>
       </ul>
     <h2>
