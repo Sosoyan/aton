@@ -288,7 +288,7 @@ m.addCommand("Aton", "nuke.createNode(\"Aton\")")
 
 <li><p><strong>Install for Houdini</strong></p>
 <ul><li><p>Copy aton_houdini.py to HtoA's scripts folder. <br><em>$HTOA_PATH/scripts/python/htoa/aton_houdini.py</em></p></li></ul>
-<ul><li><p>It's necessary to inject an extra code into HtoA to be able to add a custom driver. Therefor insert the following python patch after the line 71 of the file <em>$HTOA_PATH/soho/arnold.py</em></p></ul>
+<ul><li><p>It's necessary to inject an extra code into HtoA to be able to add a custom driver. Therefor insert the following python patch after the line 5 of the file <em>$HTOA_PATH/soho/arnold.py</em></p></ul>
 <pre><code>try:
     from htoa.aton_houdini import atonPatch
     atonPatch()
